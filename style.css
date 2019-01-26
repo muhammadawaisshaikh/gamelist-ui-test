@@ -1,0 +1,158 @@
+body{
+	overflow-x: hidden;
+	font-family: 'Lato', sans-serif;
+}
+
+.sidemenu-icon {
+	display: inline-block;
+	cursor: pointer;
+	z-index: 3;
+	position: absolute;
+	top: 6px;
+	left: 10px;
+	visibility: hidden;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 30px;
+	height: 4px;
+	background-color: #fff;
+	margin: 6px 0;
+	transition: 0.4s;
+	border-radius: 10px;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+	background-color: #fff;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -5px);
+	background-color: #fff;
+}
+/* sidemenu icon animation ends */
+
+/* sidenav starts */
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 50px;
+	left: 0;
+	background: #0f0c29;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 40px;
+	text-align:center;
+	box-shadow: 1px 1px 10px #2d295e;
+}
+
+.sidenav.width-toggle{width: 100%;}
+
+.sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #fff;
+	display: block;
+	transition: 0.5s;
+	border-bottom: 1px solid #2d295e;
+}
+
+.sidenav a.hide{
+	display: none;
+}
+
+.sidenav a i{
+	padding: 0 0 0 10px;
+}
+
+.sidenav a:hover{
+	color: #fff;
+}
+
+.sidenav .user a{ background: #2f2b61;}
+
+@media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+}
+
+.navigation
+{	
+	padding: 15px 0 15px 0;
+	background: #0f0c29;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navigation .list ul{
+	display: flex;
+    list-style: none;
+    margin-bottom: 0;
+	padding: 0 0 0 0;
+	float: right;
+}
+
+.navigation .list ul li{
+	padding: 0 10px 0 10px;
+}
+
+.navigation a.login
+{
+	text-decoration: none;
+    color: #fff;
+    background: #403973;
+    padding: 10px 30px 10px 30px;
+	border-radius: 3px;
+	transition: 0.6s;
+}
+.navigation a.login:hover{
+	background: #fff;
+	color: #403973;
+}
+
+.navigation a.signup
+{
+	text-decoration: none;
+    color: #fff;
+    border: 1px solid #5247a2;
+    padding: 10px 30px 10px 30px;
+	border-radius: 3px;
+	transition: 0.6s;
+}
+.navigation a.signup:hover{
+	background: #FFC107;
+	color: #fff;
+}
+
+.navigation .logo h4{
+	margin-bottom: 0;
+    color: #FFC107;
+}
+
+.navigation a i{
+	padding: 0 0 0 10px;
+}
+
+.navigation .logo-mobile{display: none;}
+.navigation .logo-mobile h4
+{
+	text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.sidemenu-icon {visibility: visible;}
+	.navigation{ height: 50px;}
+	.navigation .navigate{display: none;}
+	.navigation .logo-mobile{display: block;}
+}
