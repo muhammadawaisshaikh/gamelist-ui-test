@@ -1,6 +1,7 @@
 $( document ).ready(function() {
     $('.responsive-carousel').slick({
-        dots: true,
+        dots: false,
+        arrows: false,
         infinite: false,
         speed: 300,
         slidesToShow: 4,
@@ -11,8 +12,7 @@ $( document ).ready(function() {
             settings: {
               slidesToShow: 3,
               slidesToScroll: 3,
-              infinite: true,
-              dots: true
+              infinite: true
             }
           },
           {
