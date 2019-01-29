@@ -4,8 +4,8 @@ $( document ).ready(function() {
         arrows: false,
         infinite: false,
         speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         responsive: [
           {
             breakpoint: 1024,
