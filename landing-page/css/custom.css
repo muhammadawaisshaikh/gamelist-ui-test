@@ -1,1 +1,16 @@
 /* PLACE YOUR CUSTOM STYLES IN THIS FILE */
+
+.angled-img
+{
+    margin: 0px 5px 0 5px;
+}
+
+.content-wrap.content-wrap-modified
+{
+    max-width: 100%;
+}
+
+.container.container-modified
+{
+    width: 95%;
+}
