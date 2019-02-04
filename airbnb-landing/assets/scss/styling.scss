@@ -34,6 +34,7 @@ $blue_btns_login: transparent;
 @mixin secondry-btn {
 	text-decoration: none;
 	color: $color_white;
+	background: $color_yellow;
 	border: 1px solid $border_blue_light;
 	padding: 10px 30px 10px 30px;
 	border-radius: 3px;
@@ -136,9 +137,13 @@ body {
 }
 .navigation {
 	padding: 15px 0 15px 0;
-	background: #0f0c29;
-	background: -webkit-linear-gradient($gradient_blue);
-	background: linear-gradient($gradient_blue);
+	background: transparent;
+	// background: #0f0c29;
+	// background: -webkit-linear-gradient($gradient_blue);
+	// background: linear-gradient($gradient_blue);
+	position: fixed;
+    width: 100%;
+    top: 0;
 	.list {
 		ul {
 			display: flex;
@@ -154,17 +159,13 @@ body {
 	a.login {
 		@include primary-btn();
 		&:hover {
-			background: $color_white;
-			color: $color_blue;
-			box-shadow: 1px 1px 5px $blue_box_shadow;
+			opacity: 0.9;
 		}
 	}
 	a.signup {
 		@include secondry-btn();
 		&:hover {
-			background: $color_yellow;
-			color: $color_white;
-			box-shadow: 1px 1px 5px $blue_box_shadow;
+			opacity: 0.9;
 		}
 	}
 	.logo {
@@ -185,9 +186,9 @@ body {
 			text-align: center;
 		}
 	}
-	// .navigate{
-	// 	margin: 0 20px 0 20px;
-	// }
+	.navigate{
+		padding: 15px 40px 15px 40px;
+	}
 }
 @media screen and (max-height: 450px) {
 	.sidenav {
@@ -222,7 +223,7 @@ body {
 // slider
 .slider{
 	width: 100%;
-	height: 70vh;
+	height: 100vh;
 	background: linear-gradient($gradient_blue);
 	@include bg-cover-prop();
 	position: relative;
@@ -236,7 +237,7 @@ body {
 
 .search-area{
 	position: absolute;
-    top: 10%;
+    top: 30%;
 	left: 10%;
     width: 30%;
 	background: $color_white;
