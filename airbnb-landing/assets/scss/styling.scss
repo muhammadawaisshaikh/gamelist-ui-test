@@ -106,22 +106,26 @@ a{
 	z-index: 2;
 	top: 50px;
 	left: -105%;
-	background: #0f0c29;
-	background: -webkit-linear-gradient($gradient_blue);
-	background: linear-gradient($gradient_blue);
+	background: $color_white;
+	// background: #0f0c29;
+	// background: -webkit-linear-gradient($gradient_blue);
+	// background: linear-gradient($gradient_blue);
 	overflow-x: hidden;
 	transition: 0.5s;
 	padding-top: 40px;
 	text-align: center;
-	box-shadow: 1px 1px 10px $blue_box_shadow;
+	box-shadow: 1px 1px 10px #f3f3f3;
+	// box-shadow: 1px 1px 10px $blue_box_shadow;
 	a {
 		padding: 8px 8px 8px 32px;
 		text-decoration: none;
 		font-size: 25px;
-		color: $color_white;
+		color: $grey;
+		// color: $color_white;
 		display: block;
 		transition: 0.5s;
-		border-bottom: 1px solid $blue_box_shadow;
+		border-bottom: 1px solid #f3f3f3;
+		// border-bottom: 1px solid $blue_box_shadow;
 		i {
 			padding: 0 0 0 10px;
 		}
@@ -134,7 +138,8 @@ a{
 	}
 	.user {
 		a {
-			background: $blue_btns_login;
+			background: #f9f9f9;
+			// background: $blue_btns_login;
 		}
     }
     &.width-toggle {
