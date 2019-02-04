@@ -2,6 +2,7 @@ $color_white: #fff;
 $grey: #484848;
 $font_family_lato: 'Lato', sans-serif;
 $background_color_white: #fff;
+$transition: 0.4s;
 
 // varient 1
 // $color_blue: #403973;
@@ -45,6 +46,11 @@ body {
 	overflow-x: hidden;
 	font-family: $font_family_lato;
 }
+
+a{
+	text-decoration: none;
+}
+
 .sidemenu-icon {
 	display: inline-block;
 	cursor: pointer;
@@ -276,6 +282,25 @@ body {
 		cursor: pointer;
 		&:hover{
 			opacity:0.9;
+		}
+	}
+}
+
+.console-area{
+	text-align: center;
+    padding: 5px 30px 5px 30px;
+    border: 1px solid #ececec;
+    border-radius: 30px;
+    margin: 0 0 30px 0;
+	.item{
+		display: inline-block;
+		padding: 5px 20px 5px 20px;
+		cursor: pointer;
+		transition: $transition;
+		&:hover{
+			color: $color_white;
+			background: $blus_light;
+			border-radius: 20px;
 		}
 	}
 }

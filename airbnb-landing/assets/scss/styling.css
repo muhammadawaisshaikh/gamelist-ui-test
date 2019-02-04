@@ -2,6 +2,9 @@ body {
   overflow-x: hidden;
   font-family: "Lato", sans-serif; }
 
+a {
+  text-decoration: none; }
+
 .sidemenu-icon {
   display: inline-block;
   cursor: pointer;
@@ -196,5 +199,21 @@ body {
     cursor: pointer; }
     .search-area button:hover {
       opacity: 0.9; }
+
+.console-area {
+  text-align: center;
+  padding: 5px 30px 5px 30px;
+  border: 1px solid #ececec;
+  border-radius: 30px;
+  margin: 0 0 30px 0; }
+  .console-area .item {
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
+    cursor: pointer;
+    transition: 0.4s; }
+    .console-area .item:hover {
+      color: #fff;
+      background: #0669d8;
+      border-radius: 20px; }
 
 /*# sourceMappingURL=styling.css.map */
