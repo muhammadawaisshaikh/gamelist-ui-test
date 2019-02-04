@@ -1,4 +1,5 @@
 $color_white: #fff;
+$grey: #484848;
 $font_family_lato: 'Lato', sans-serif;
 $background_color_white: #fff;
 
@@ -19,6 +20,25 @@ $blus_light: #0669d8;
 $border_blue_light: #00b1da;
 $blue_box_shadow: #0773ef80;
 $blue_btns_login: transparent;
+
+// primary button
+@mixin primary-btn {
+	text-decoration: none;
+	color: $color_white;
+	background: $blus_light;
+	padding: 10px 30px 10px 30px;
+	border-radius: 3px;
+	transition: 0.6s;
+}
+//secondry button
+@mixin secondry-btn {
+	text-decoration: none;
+	color: $color_white;
+	border: 1px solid $border_blue_light;
+	padding: 10px 30px 10px 30px;
+	border-radius: 3px;
+	transition: 0.6s;
+}
 
 body {
 	overflow-x: hidden;
@@ -132,12 +152,7 @@ body {
 		}
 	}
 	a.login {
-		text-decoration: none;
-		color: $color_white;
-		background: $blus_light;
-		padding: 10px 30px 10px 30px;
-		border-radius: 3px;
-		transition: 0.6s;
+		@include primary-btn();
 		&:hover {
 			background: $color_white;
 			color: $color_blue;
@@ -145,12 +160,7 @@ body {
 		}
 	}
 	a.signup {
-		text-decoration: none;
-		color: $color_white;
-		border: 1px solid $border_blue_light;
-		padding: 10px 30px 10px 30px;
-		border-radius: 3px;
-		transition: 0.6s;
+		@include secondry-btn();
 		&:hover {
 			background: $color_yellow;
 			color: $color_white;
@@ -215,10 +225,56 @@ body {
 	height: 70vh;
 	background: linear-gradient($gradient_blue);
 	@include bg-cover-prop();
+	position: relative;
 	.shade{
 		width: 100%;
 		height: 100%;
 		background: linear-gradient($gradient_blue);
 		opacity: 0.4;
+	}
+}
+
+.search-area{
+	position: absolute;
+    top: 10%;
+	left: 10%;
+    width: 30%;
+	background: $color_white;
+	padding: 40px;
+	border-radius: 5px;
+	.head{
+		color: $grey;
+		font-size: 30px;
+		font-weight: 800;
+		padding: 0 0 10px 0;
+	}
+	label{
+		color: $grey;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+	input{
+		width: 100%;
+		padding: 10px 20px 10px 20px;
+		border-radius: 4px;
+		border: 0;
+		box-shadow: 0px 0px 10px #ececec;
+    	margin: 0 0 15px 0;
+		&:focus{
+			outline: none;
+		}
+		&::placeholder{
+			color: $grey;
+			opacity: 0.5;
+		}
+	}
+	button{
+		@include primary-btn();
+		border: 0;
+		cursor: pointer;
+		&:hover{
+			opacity:0.9;
+		}
 	}
 }
