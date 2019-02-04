@@ -216,4 +216,19 @@ a {
       background: #0669d8;
       border-radius: 20px; }
 
+@media only screen and (max-width: 768px) {
+  .search-area {
+    top: 25%;
+    left: 0;
+    width: 95%;
+    margin: 0 2.5% 0 2.5%; }
+
+  .console-area {
+    display: flex;
+    overflow: scroll;
+    padding: 5px 10px 5px 10px; } }
+@media only screen and (max-width: 600px) {
+  .search-area {
+    top: 15%; } }
+
 /*# sourceMappingURL=styling.css.map */
