@@ -2,7 +2,7 @@ $color_white: #fff;
 $grey: #484848;
 $font_family_lato: 'Lato', sans-serif;
 $background_color_white: #fff;
-$transition: 0.4s;
+$trans: 0.4s;
 
 // varient 1
 // $color_blue: #403973;
@@ -40,6 +40,31 @@ $blue_btns_login: transparent;
 	padding: 10px 30px 10px 30px;
 	border-radius: 3px;
 	transition: 0.6s;
+}
+
+@mixin custom-dropdown {
+	.custom-dropdown{
+		position: relative;
+		input{
+			width: 100%;
+		}
+		ul{
+			margin-bottom: 0;
+			padding-left: 0;
+			list-style: none;
+			width: 100%;
+			position: absolute;
+			background-color: $color_white;
+			border-top: 1px solid #ccc;
+			li{
+				padding: 10px;
+				cursor: pointer;
+				&:hover{
+					background-color: #eaeaea;
+				}
+			}
+		}
+	}
 }
 
 body {
@@ -149,9 +174,6 @@ a{
 .navigation {
 	padding: 15px 0 15px 0;
 	background: transparent;
-	// background: #0f0c29;
-	// background: -webkit-linear-gradient($gradient_blue);
-	// background: linear-gradient($gradient_blue);
 	position: fixed;
     width: 100%;
     top: 0;
@@ -163,20 +185,16 @@ a{
 			padding: 0 0 0 0;
 			float: right;
 			li {
-				padding: 0 10px 0 10px;
+				padding: 0 10px 10px 10px;
+				a{
+					text-decoration: none;
+					color: $color_white;
+					font-weight: 600;
+				}
+				&:hover{
+					border-bottom: 2px solid $color_white;
+				}
 			}
-		}
-	}
-	a.login {
-		@include primary-btn();
-		&:hover {
-			opacity: 0.9;
-		}
-	}
-	a.signup {
-		@include secondry-btn();
-		&:hover {
-			opacity: 0.9;
 		}
 	}
 	.logo {
@@ -248,85 +266,46 @@ a{
 
 .search-area{
 	position: absolute;
-    top: 30%;
-	left: 10%;
-    width: 30%;
-	background: $color_white;
-	padding: 40px;
-	border-radius: 5px;
-	.head{
-		color: $grey;
-		font-size: 30px;
-		font-weight: 800;
-		padding: 0 0 10px 0;
+    top: 35%;
+	width: 100%;
+	padding: 0 5% 0 5%;
+	h1{
+		font-size: 50px;
+    	color: #fff;
+    	font-weight: 800;
 	}
-	label{
-		color: $grey;
-		font-weight: 600;
-		text-transform: uppercase;
-		font-size: 13px;
-	}
-	input{
-		width: 100%;
-		padding: 10px 20px 10px 20px;
-		border-radius: 4px;
-		border: 0;
-		box-shadow: 0px 0px 10px #ececec;
-    	margin: 0 0 15px 0;
-		&:focus{
-			outline: none;
+	.searches{
+		display: flex;
+		input, select{
+			padding: 20px;
+			border: 0;
+			background-color: $color_white;
+			border-left: 1px solid #ccc;
+			font-size: 15px;
+			&:focus{
+				outline: none;
+			}
 		}
-		&::placeholder{
-			color: $grey;
-			opacity: 0.5;
+		.game{
+			width: 50%;
+			border-radius: 5px 0 0 5px;
 		}
-	}
-	button{
-		@include primary-btn();
-		border: 0;
-		cursor: pointer;
-		&:hover{
-			opacity:0.9;
+		.location{
+			width: 20%;
+			border-radius: 0 5px 5px 0;
 		}
-	}
-}
-
-.console-area{
-	text-align: center;
-    padding: 5px 30px 5px 30px;
-    border: 1px solid #ececec;
-    border-radius: 30px;
-    margin: 0 0 30px 0;
-	.item{
-		display: inline-block;
-		padding: 5px 30px 5px 30px;
-		cursor: pointer;
-		transition: $transition;
-		&:hover{
-			color: $color_white;
-			background: $blus_light;
-			border-radius: 20px;
+		@include custom-dropdown();
+		.custom-dropdown{
+			width: 20%;
 		}
 	}
 }
 
 // media queries
 @media only screen and (max-width: 768px) {
-	.search-area{
-		top: 25%;
-		left: 0;
-		width: 95%;
-		margin: 0 2.5% 0 2.5%;
-	}
-	.console-area{
-		display: flex;
-		overflow: scroll;
-		padding: 5px 10px 5px 10px;
-	}
+
 }
 
 @media only screen and (max-width: 600px) {
-	.search-area{
-		top: 15%;
-	}
+	
 }
