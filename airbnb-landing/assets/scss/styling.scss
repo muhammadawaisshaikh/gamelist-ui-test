@@ -296,9 +296,18 @@ a{
 			width: 50%;
 			border-radius: 5px 0 0 5px;
 		}
-		.location{
+		.location-area{
+			position: relative;
 			width: 20%;
-			border-radius: 0 5px 5px 0;
+			.location{
+				width: 100%;
+				border-radius: 0 5px 5px 0;
+			}
+			a{
+				position: absolute;
+				top: 30%;
+				right: 10%;
+			}
 		}
 		@include custom-dropdown();
 		.custom-dropdown{
