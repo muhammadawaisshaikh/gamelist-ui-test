@@ -187,5 +187,11 @@ a {
             background-color: #eaeaea; }
     .search-area .searches .custom-dropdown {
       width: 20%; }
+    .search-area .searches .search-btn {
+      background: #FF5A5F;
+      color: #fff;
+      border: 0;
+      border-radius: 5px;
+      margin: 0 0 0 10px; }
 
 /*# sourceMappingURL=styling.css.map */
