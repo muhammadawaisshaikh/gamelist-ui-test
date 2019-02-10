@@ -56,12 +56,18 @@ $blue_btns_login: transparent;
 			position: absolute;
 			background-color: $color_white;
 			border-top: 1px solid #ccc;
+			display: none;
 			li{
 				padding: 10px;
 				cursor: pointer;
 				&:hover{
 					background-color: #eaeaea;
 				}
+			}
+		}
+		&.show{
+			ul{
+				display: block;
 			}
 		}
 	}

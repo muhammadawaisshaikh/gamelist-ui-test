@@ -179,12 +179,15 @@ a {
         width: 100%;
         position: absolute;
         background-color: #fff;
-        border-top: 1px solid #ccc; }
+        border-top: 1px solid #ccc;
+        display: none; }
         .search-area .searches .custom-dropdown ul li {
           padding: 10px;
           cursor: pointer; }
           .search-area .searches .custom-dropdown ul li:hover {
             background-color: #eaeaea; }
+      .search-area .searches .custom-dropdown.show ul {
+        display: block; }
     .search-area .searches .custom-dropdown {
       width: 20%; }
     .search-area .searches .search-btn {

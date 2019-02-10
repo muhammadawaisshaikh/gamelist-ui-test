@@ -11,5 +11,10 @@ $(document).ready(function () {
       $('.sidemenu-icon').toggleClass('change');
       $('.inner-page').toggleClass('fade');
     });
+
+    $(".custom-dropdown" ).click(function() {
+      $(this).toggleClass('show');
+    });
+
     
 });
