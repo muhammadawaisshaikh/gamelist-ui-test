@@ -11,5 +11,15 @@ $(document).ready(function () {
       $('.sidemenu-icon').toggleClass('change');
       $('.inner-page').toggleClass('fade');
     });
+
+    $(".custom-dropdown" ).click(function() {
+      $(this).toggleClass('show');
+    });
+
+    $(".custom-dropdown ul li" ).click(function() {
+      $("#console").val($(this).text());
+    });
+
+
     
 });
