@@ -9,3 +9,7 @@ https://muhammadawaisshaikh.github.io/gamelist-ui-test/landing-page/dark-index.h
 
 # Airbnb Inspiration Landing Page
 https://muhammadawaisshaikh.github.io/gamelist-ui-test/airbnb-landing/
+
+#Logo Typography
+Lato Fonts usage: https://muhammadawaisshaikh.github.io/gamelist-ui-test/logo-typography/lato
+Montserrat Fonts usage: https://muhammadawaisshaikh.github.io/gamelist-ui-test/logo-typography/monsterat/
