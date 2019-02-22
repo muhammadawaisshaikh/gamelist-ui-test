@@ -25,3 +25,24 @@ h1{
 .bold{
     font-weight: 900;
 }
+
+/* G(Red)A(White)M(Yellow)E(White)L(Green)I(White)S(Blue)T(White) */
+.red{
+    color: #ff0000;
+}
+
+.white{
+    color: white;
+}
+
+.yellow{
+    color: #FFC107;
+}
+
+.green{
+    color: #4CAF50;
+}
+
+.blue{
+    color: #2196F3;
+}
